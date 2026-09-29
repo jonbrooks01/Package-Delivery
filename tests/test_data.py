@@ -1,4 +1,4 @@
-"""Tests for the data files and your loaders. Complete -- run, don't edit."""
+"""Tests for the data files and loaders. """
 
 import csv
 import os
@@ -87,7 +87,7 @@ class TestDistanceFile(unittest.TestCase):
 
 
 class TestEveryPackageAddressIsOnTheMap(unittest.TestCase):
-    """The one that catches the 5383 South / 5383 S mismatch."""
+
 
     def test_all_40_resolve(self):
         try:

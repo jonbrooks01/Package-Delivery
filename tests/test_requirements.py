@@ -1,8 +1,4 @@
-"""Every scenario requirement, checked against your finished program.
-
-These skip until build_day() works, then they become your rubric F2 evidence.
-Run them before you take the D1-D3 and E screenshots.
-"""
+""" Special Conditions Tests """
 
 import os
 import sys

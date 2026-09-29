@@ -1,11 +1,4 @@
-"""Tests for your hash table. These are complete -- run them, don't edit them.
-
-    python3 -m unittest discover -s tests -v
-
-Get this file passing BEFORE you write package.py, locations.py, or anything
-else. Everything above the hash table calls into it, so a fault here surfaces
-later as a mystery rather than as a failing test.
-"""
+"""Tests for hash table. """
 
 import os
 import sys
@@ -57,7 +50,7 @@ class TestInsertAndLookup(unittest.TestCase):
 
 
 class TestResizing(unittest.TestCase):
-    """The high-value test. A resize that drops entries is nearly invisible."""
+
 
     def test_500_keys_survive_every_resize(self):
         t = ChainingHashTable(capacity=5)
@@ -87,7 +80,7 @@ class TestResizing(unittest.TestCase):
 
 
 class TestNoExtraLibraries(unittest.TestCase):
-    """Rubric A: "without using any additional libraries or classes"."""
+
 
     def test_hash_table_module_imports_nothing(self):
         path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
