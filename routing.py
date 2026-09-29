@@ -129,17 +129,14 @@ def choose_next_stop(current_location, current_time, remaining, packages, matrix
                      if packages[p].has_deadline]
         return min(deadlines) if deadlines else None
 
-    # --- the greedy choice: the closest stop still on the list ---------
+
     candidate = min(remaining, key=lambda loc: matrix[current_location][loc])
 
-    # --- the feasibility check, before committing to it ----------------
-    # If the truck goes to `candidate` first, it arrives here:
+
     arrival = current_time + time_utils.travel_time(
         matrix[current_location][candidate])
 
-    # From there, could it still reach every other deadline by driving
-    # STRAIGHT to it? A direct drive is the fastest possible approach, so a
-    # deadline that fails this test cannot be met along this path at all.
+
     at_risk = []
     for location_index in remaining:
         if location_index == candidate:
